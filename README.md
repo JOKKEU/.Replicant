@@ -3,6 +3,9 @@ Program for searching files in the Linux system. Output to console or file.
 
 install: 
 ```
+git clone https://github.com/JOKKEU/.Replicant
+cd .Replicant
+if install.sh - non executable file: sudo chmod +x install.sh
 ./install.sh
 output:
 [+] directory created
