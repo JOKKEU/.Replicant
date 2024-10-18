@@ -268,7 +268,7 @@ int jokkeu_all_finds_and_path(file& file_find, std::pair<int, std::string>& wfil
 
 		if (wfile.first == 0) 
 		{
-			if (all_files.empty()) {std::cout << "\033[31m" <<"\nfiles not found."<< "\033[31m\n"; std::cout << "\033[0m"; return EXIT_SUCCESS;}
+			if (all_files.empty()) {std::cout << "\033[31m" <<"\nfiles not found."<< "\033[31m\n"; std::cout << "\033[0m"; utils_thread::loading = false;  return EXIT_SUCCESS;}
 
 			std::cout << "\033[33m" <<"\nFound: " << sz_vector << "\n"<< "\033[33m";
 			for (auto i = all_files.begin(); i != all_files.end(); ++i)
@@ -386,7 +386,7 @@ int included_in_filename(file& inc_string, std::pair<int, std::string>& wfile)
 
 		if (wfile.first == 0) 
 		{
-			if (all_included.empty()) {std::cout << "\033[31m" <<"\nfiles not found."<< "\033[31m\n"; std::cout << "\033[0m"; return EXIT_SUCCESS;}
+			if (all_included.empty()) {std::cout << "\033[31m" <<"\nfiles not found."<< "\033[31m\n"; std::cout << "\033[0m"; utils_thread::loading = false; return EXIT_SUCCESS;}
 			std::cout << "\033[33m" <<"\nFound: " << sz_vector << "\n"<< "\033[33m";
 
 			for (auto i = all_included.begin(); i != all_included.end(); ++i)
