@@ -21,7 +21,6 @@ extern "C" void console_loading()
             std::cout.flush();
             if (utils_thread::loading == false) {return;}
             std::this_thread::sleep_for(std::chrono::milliseconds(200));
-            if (utils_thread::loading == false) {return;}
         }
     }
     std::cout << "  \r\n";
