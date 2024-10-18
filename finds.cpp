@@ -58,7 +58,8 @@ int jokkeu_find(file& file_find, std::pair<int, std::string>& wfile)
 					out.open(wfile.second, std::ios::out | std::ios::trunc);
 					if (out.is_open())
 					{
-						out << entry.path().filename().string() << std::endl; 
+						out << entry.path().filename().string() << std::endl;
+						out.close();
 					}
 					else
 					{
@@ -80,6 +81,7 @@ int jokkeu_find(file& file_find, std::pair<int, std::string>& wfile)
 					if (out.is_open())
 					{
 						out << entry.path().filename().string() << std::endl;
+						out.close();
 					}
 					else
 					{
@@ -165,6 +167,7 @@ int jokkeu_find_and_path_to_file_first_result(file& file_find, std::pair<int, st
 						if (out.is_open())
 						{
 							out << entry.path() << std::endl; 
+							out.close();
 						}
 						else
 						{
@@ -187,6 +190,7 @@ int jokkeu_find_and_path_to_file_first_result(file& file_find, std::pair<int, st
 						if (out.is_open())
 						{
 							out << entry.path() << std::endl;
+							out.close();
 						}
 						else
 						{
@@ -293,7 +297,8 @@ int jokkeu_all_finds_and_path(file& file_find, std::pair<int, std::string>& wfil
 
 					out << "[" << count << "] " << i->path() << std::endl; 
 					++count;
-				} 
+				}
+				out.close();
 				utils_thread::loading = false;
 				return EXIT_SUCCESS;
 			}
@@ -321,6 +326,7 @@ int jokkeu_all_finds_and_path(file& file_find, std::pair<int, std::string>& wfil
 					out << "[" << count << "] " << i->path() << std::endl; 
 					++count;
 				} 
+				out.close();
 				utils_thread::loading = false;
 				return EXIT_SUCCESS;
 			}
@@ -408,6 +414,7 @@ int included_in_filename(file& inc_string, std::pair<int, std::string>& wfile)
 					out << "[" << count << "] " << i->path() << std::endl; 
 					++count;
 				}
+				out.close();
 				utils_thread::loading = false;
 				return EXIT_SUCCESS;
 			}
@@ -434,6 +441,7 @@ int included_in_filename(file& inc_string, std::pair<int, std::string>& wfile)
 					out << "[" << count << "] " << i->path() << std::endl; 
 					++count;
 				}
+				out.close();
 				utils_thread::loading = false;
 				return EXIT_SUCCESS;
 			}
