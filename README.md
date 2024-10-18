@@ -16,7 +16,7 @@ output:
 [+] Usage: Replicant --help
 
 ```
-Usage: Reolicant --help
+Usage: Replicant --help
 ```
 output:
 Usage: <program> [options]
