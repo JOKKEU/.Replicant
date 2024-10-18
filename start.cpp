@@ -187,7 +187,7 @@ int start(int count, char** param)
 			}
 
 
-			std::cout << "Operation[(N)ext/(E)xit]\n";
+			std::cout << "\n\nOperation[(N)ext/(E)xit]\n";
 			std::getline(std::cin, buffer);
 
 			for (auto &c : buffer) c = tolower(c);
