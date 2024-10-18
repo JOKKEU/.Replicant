@@ -13,7 +13,7 @@ file& init(file& file_find)
 		start_path = fs::absolute(fs::current_path());
 	}
 	else {start_path = file_find.get_path();}
-	return file_find;
+	return file_find; 
 }
 
 
@@ -132,6 +132,7 @@ int jokkeu_find_and_path_to_file_first_result(file& file_find, std::pair<int, st
 			std::cout << "\033[31m" << "The path does not exist or is not a directory.\n" << "\033[31m";
 			std::cout << "\033[0m";
 			utils_thread::loading = false;
+			
 			return EXIT_FAILURE;
 		}
 
@@ -191,6 +192,7 @@ int jokkeu_find_and_path_to_file_first_result(file& file_find, std::pair<int, st
 						{
 							std::cout << "Error: Failed to open file for appending\n";
 							utils_thread::loading = false;
+							
 							return EXIT_FAILURE;
 						}
 						return EXIT_SUCCESS;
