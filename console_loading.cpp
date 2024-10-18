@@ -13,12 +13,12 @@ extern "C" void console_loading()
     while (utils_thread::loading)
     {
         std::lock_guard<std::mutex> guard(utils_thread::console_mutex);
-        for (size_t i = 0; i < 3; ++i)
+        for (size_t m = 0; m < 3; ++m)
         {
             std::cout << ".";
             std::cout.flush();
             std::this_thread::sleep_for(std::chrono::milliseconds(200));
         }
     }
-    std::cout << "\r        ";
+    std::cout << "  \r\n";
 }
