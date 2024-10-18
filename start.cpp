@@ -123,7 +123,7 @@ int start(int count, char** param)
 						exit(EXIT_FAILURE);
 					}
 				});
-
+				utils_thread::loading = false;
 				std::thread th_console(std::ref(console_loading));
 
 				th_find.join();
@@ -142,7 +142,7 @@ int start(int count, char** param)
 				});
 
 				std::thread th_console(std::ref(console_loading));
-
+				utils_thread::loading = false;
 				th_find.join();
 				th_console.join();
 	
@@ -159,7 +159,7 @@ int start(int count, char** param)
 				});
 
 				std::thread th_console(std::ref(console_loading));
-
+				utils_thread::loading = false;
 				th_find.join();
 				th_console.join();
 				
@@ -177,7 +177,7 @@ int start(int count, char** param)
 				});
 
 				std::thread th_console(std::ref(console_loading));
-
+				utils_thread::loading = false;
 				th_find.join();
 				th_console.join();
 			}
