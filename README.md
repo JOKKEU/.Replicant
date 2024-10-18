@@ -40,4 +40,5 @@ Found: 6
 [5] "/home/jokkeu/Desktop/replicant_find/finds.cpp"
 [6] "/home/jokkeu/Desktop/replicant_find/console_loading.cpp"
 ```
+P.S: For a broader search coverage, use "sudo Replicant ..."
 
