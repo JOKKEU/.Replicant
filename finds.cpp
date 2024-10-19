@@ -38,7 +38,7 @@ int jokkeu_find(file& file_find, std::pair<int, std::string>& wfile)
 		{
 			if (nfile.get_name() == entry.path().filename().string())
 			{
-				std::cout << "\033[32m" << "***\nFILE IS FOUND***\n" << "\033[32m";
+				std::cout << "\033[32m" << "\n***FILE IS FOUND***\n" << "\033[32m";
 				std::cout << "\033[0m";
 				
 				if (wfile.first == 0)
